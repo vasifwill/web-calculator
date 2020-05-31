@@ -21,14 +21,14 @@
                 // we have a bug here due to JS using "+" for addition and concatonation
                 // see https://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_concat5
                 // and https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
-                document.forms.inputs.result.value = document.forms.inputs.number1.value + document.forms.inputs.number2.value;
+                document.forms.inputs.result.value = parseInt(document.forms.inputs.number1.value) + parseInt(document.forms.inputs.number2.value);
             },
             subtract: function () {
-                document.forms.inputs.result.value = document.forms.inputs.number1.value - document.forms.inputs.number2.value;
+                document.forms.inputs.result.value = parseInt(document.forms.inputs.number1.value) - parseInt(document.forms.inputs.number2.value);
             },
             multiply: function () {
                 // @TODO: complete this code so it returns the correct result
-                document.forms.inputs.result.value = "We're working on this feature";
+                document.forms.inputs.result.value = parseInt(document.forms.inputs.number1.value) * parseInt(document.forms.inputs.number2.value);
             }
         }
     </script>
