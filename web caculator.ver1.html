@@ -12,23 +12,21 @@
     >
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script>
-        /**
-         * `calculator` is a variable that is an object. The {} brackets denote the variable is an object.
-         * `add`, `subtract` and `multiply` are functions. They are also properties of the `calculator` object.
-         */
+       
         calculator = {
             add: function () {
-                // we have a bug here due to JS using "+" for addition and concatonation
-                // see https://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_concat5
-                // and https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
+                
                 document.forms.inputs.result.value = parseInt(document.forms.inputs.number1.value) + parseInt(document.forms.inputs.number2.value);
             },
             subtract: function () {
                 document.forms.inputs.result.value = parseInt(document.forms.inputs.number1.value) - parseInt(document.forms.inputs.number2.value);
             },
             multiply: function () {
-                // @TODO: complete this code so it returns the correct result
+                
                 document.forms.inputs.result.value = parseInt(document.forms.inputs.number1.value) * parseInt(document.forms.inputs.number2.value);
+            },
+            divide: function () {
+                document.forms.inputs.result.value = parseInt(document.forms.inputs.number1.value) / parseInt(document.forms.inputs.number2.value);
             }
         }
     </script>
@@ -72,6 +70,7 @@
                         <button type="button" class="btn btn-primary" onclick="calculator.add()">add</button>
                         <button type="button" class="btn btn-primary" onclick="calculator.subtract()">subtract</button>
                         <button type="button" class="btn btn-secondary" onclick="calculator.multiply()">multiply</button>
+                        <button type="button" class="btn btn-secondary" onclick="calculator.divide()">divide</button>
                     </div>
                     <div class="form-group result">
                         <label>Result</label>
